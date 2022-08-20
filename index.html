@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/8cf3632fc7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="grid--2-cols">
+        <div
+          class="image-container"
+          role="img"
+          aria-label="A green desk with drawers with picture frames and a vase on the surfce"
+        ></div>
+
+        <div class="text-container">
+          <div class="article-preivew-box">
+            <h1 class="primary-heading">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p class="description">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
+            </p>
+            <div class="author-and-share">
+              <div class="author">
+                <img
+                  class="author-img"
+                  src="images/avatar-michelle.jpg"
+                  alt="Headshot of Michelle Appleton"
+                />
+                <div class="author-info">
+                  <h2 class="author-name">Michelle Appleton</h2>
+                  <p class="date">28 Jun 2020</p>
+                </div>
+              </div>
+              <div class="share-btn-container">
+                <button class="share-btn">
+                  <i class="share-icon fa-solid fa-share"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="share-popup hidden">
+        <span>share</span>
+        <a class="sns-btn" href="https://www.facebook.com"
+          ><i class="sns-icon fa-brands fa-square-facebook"></i
+        ></a>
+        <a class="sns-btn" href="https://www.twitter.com"
+          ><i class="sns-icon fa-brands fa-twitter"></i
+        ></a>
+        <a class="sns-btn" href="https://www.pinterest.com"
+          ><i class="sns-icon fa-brands fa-pinterest"></i
+        ></a>
+      </div>
+
+      <div class="mobile--share-popup hidden">
+        <span>share</span>
+        <div class="sns-btns">
+          <a class="mobile-sns-btn" href="https://www.facebook.com"
+            ><i class="mobile-sns-icon fa-brands fa-square-facebook"></i
+          ></a>
+          <a class="mobile-sns-btn" href="https://www.twitter.com"
+            ><i class="mobile-sns-icon fa-brands fa-twitter"></i
+          ></a>
+          <a class="mobile-sns-btn" href="https://www.pinterest.com"
+            ><i class="mobile-sns-icon fa-brands fa-pinterest"></i
+          ></a>
+        </div>
+        <button class="mobile--share-btn">
+          <i class="mobile--share-icon fa-solid fa-share"></i>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">
+        <a
+          class="frontend-mentor"
+          href="https://www.frontendmentor.io/profile/kongguksu"
+          >@FrontendMentor</a
+        >
+        Challenge, coded by
+        <a class="twitter-link" href="https://twitter.com/sooj2050"
+          >@sooj2050</a
+        >
+        👩🏻‍💻
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+/* Desktop-first Flow */
+
+/***** Below 880px *****/
+/* reduce container width */
+/* fix bg position */
+/* fix popup location */
+/* fix heading */
+@media (max-width: 55em) {
+  .grid--2-cols {
+    width: 37rem;
+  }
+
+  .image-container {
+    background-position: center;
+  }
+
+  .share-popup {
+    top: 55%;
+    right: -11.5%;
+  }
+}
+
+/***** Below 736px *****/
+/* add margin-top and bottom to body */
+/* fix grid */
+/* fix margins */
+@media (max-width: 46em) {
+  body {
+    margin-top: 5rem;
+  }
+
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 4fr;
+
+    width: 30rem;
+  }
+
+  .image-container {
+    grid-row: 1 / 2;
+  }
+
+  .text-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    margin: 2.3rem 2.6rem;
+  }
+
+  .share-popup {
+    top: 68%;
+    right: -13%;
+  }
+
+  footer {
+    margin-bottom: 5rem;
+  }
+}
+
+/***** Below 608px *****/
+@media (max-width: 38em) {
+  .grid--2-cols {
+    grid-template-rows: 2fr 3fr;
+
+    width: 20.5rem;
+  }
+
+  .text-container {
+    margin: 2.1rem 2rem 1.3rem 2rem;
+  }
+
+  .primary-heading {
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+  }
+
+  .description {
+    letter-spacing: 0.2px;
+
+    margin-bottom: 1.5rem;
+  }
+
+  .share-btn {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .share-icon {
+    font-size: 1.1rem;
+  }
+}

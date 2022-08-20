@@ -1,0 +1,354 @@
+/* 
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700
+
+## Icons
+
+We provide SVGs for the social icons. But please feel free to use a font icon library if you like. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
+
+- FONT SIZES (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  height: 100%;
+  background-color: var(--light-grayish-blue);
+
+  overflow-y: scroll;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100%;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 0.81rem;
+  font-weight: 500;
+  line-height: 1;
+
+  overflow-y: scroll;
+}
+
+main {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+
+  position: relative;
+
+  width: 46rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0.6rem 1.2rem 1rem rgba(0, 0, 0, 0.1);
+
+  overflow: hidden;
+}
+
+/* LEFT COLUMN */
+.image-container {
+  grid-column: 1 / 2;
+  background: url(../images/drawers.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* RIGHT COLUMN */
+.text-container {
+  grid-column: 2 / 3;
+
+  margin: 2.1rem 2.4rem 1.9rem;
+}
+
+.primary-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--very-dark-grayish-blue);
+  line-height: 1.4;
+
+  margin-bottom: 0.8rem;
+}
+
+.description {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--desaturated-dark-blue);
+  line-height: 1.6;
+
+  margin-bottom: 1.2rem;
+}
+
+.author-and-share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-img {
+  width: 2.5rem;
+  border-radius: 10rem;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.author-name {
+  font-size: inherit;
+  color: var(--very-dark-grayish-blue);
+}
+
+.date {
+  color: var(--grayish-blue);
+}
+
+.share-btn {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: var(--light-grayish-blue);
+
+  cursor: pointer;
+}
+
+.share-btn:hover,
+.share-btn:active {
+  background-color: var(--desaturated-dark-blue);
+
+  transition: all 0.35s ease-in-out;
+}
+
+.share-btn:hover .share-icon,
+.share-btn:active .share-icon {
+  color: #fff;
+}
+
+.share-icon {
+  font-size: 1.2rem;
+  color: var(--desaturated-dark-blue);
+}
+
+/* js element */
+.share-popup {
+  position: absolute;
+  top: 47%;
+  right: -9%;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  background-color: var(--very-dark-grayish-blue);
+
+  font-family: inherit;
+  font-weight: inherit;
+  color: var(--light-grayish-blue);
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 0.6rem;
+  box-shadow: 0.2rem 0.5rem 0.4rem rgba(0, 0, 0, 0.1);
+
+  padding: 1.1rem 2.2rem;
+}
+
+.share-popup::before {
+  content: "";
+
+  position: absolute;
+  top: 76%;
+  right: 45%;
+  transform: translateX((-50%));
+
+  border-top: 0.8rem solid var(--very-dark-grayish-blue);
+  border-right: 0.8rem solid transparent;
+  border-left: 0.8rem solid transparent;
+
+  margin: 0.8rem 0 0 -1.5rem;
+}
+
+.share-popup span {
+  font-size: inherit;
+  letter-spacing: 0.3rem;
+}
+
+.sns-btn:link,
+.sns-btn:visited,
+.mobile-sns-btn:link,
+.mobile-sns-btn:visited {
+  display: inline-block;
+}
+
+.sns-btn:hover .sns-icon,
+.sns-btn:active .sns-icon,
+.mobile-sns-btn:hover .mobile-sns-icon,
+.mobile-sns-btn:active .mobile-sns-icon {
+  color: var(--grayish-blue);
+}
+
+.sns-icon {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* FOOTER */
+.footer {
+  padding: 0.2rem;
+  margin-top: 1rem;
+}
+
+.frontend-mentor:link,
+.frontend-mentor:visited,
+.twitter-link:link,
+.twitter-link:visited {
+  text-decoration: none;
+  font-weight: 700;
+  color: #c43362;
+
+  transition: color 0.3s ease;
+}
+
+.frontend-mentor:hover,
+.frontend-mentor:active,
+.twitter-link:hover,
+.twitter-link:active {
+  color: #853f84;
+}
+
+/* mobile share popup */
+.mobile--share-popup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width: 100%;
+  height: 4.2rem;
+  background-color: var(--very-dark-grayish-blue);
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.mobile--share-popup span {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #fff;
+}
+
+.sns-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mobile-sns-icon {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.mobile--share-btn {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: var(--desaturated-dark-blue);
+
+  cursor: pointer;
+  margin-left: 2.5rem;
+}
+
+.mobile--share-btn:hover,
+.mobile--share-btn:active {
+  background-color: var(--light-grayish-blue);
+
+  transition: all 0.35s ease-in-out;
+}
+
+.mobile--share-btn:hover .mobile--share-icon,
+.mobile--share-btn:active .mobile--share-icon {
+  color: var(--very-dark-grayish-blue);
+}
+
+.mobile--share-icon {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* js - add/remove class */
+.hidden {
+  display: none;
+}
