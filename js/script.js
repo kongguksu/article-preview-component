@@ -7,7 +7,6 @@ const speechBubble = document.querySelector(`.share-popup`);
 const authorContainer = document.querySelector(`.author-container`);
 const authorInfo = document.querySelector(`.author-and-share`);
 
-const btnMobile = document.querySelector(`.mobile--share-btn`);
 const mobileSharePopup = document.querySelector(`.mobile--share-popup`);
 
 //////////////////////////////
@@ -27,6 +26,7 @@ const btnInactive = function () {
   ) {
     btnShare.classList.remove(`btn--active`);
     document.querySelector(`.share-icon`).classList.remove(`btn-icon--active`);
+    document.querySelector(`.share-btn-container`).appendChild(btnShare)
   }
 };
 
@@ -44,6 +44,7 @@ btnShare.addEventListener(`click`, function () {
     // hide author-and-share & show mobileSharePopup
     authorInfo.classList.add(`hideOpacity`);
     mobileSharePopup.classList.remove(`hidden`);
+    mobileSharePopupBtnContainer.appendChild(btnShare)
     mobileSharePopup.style.height = `${authorContainer.height}`;
   }
 });
@@ -75,7 +76,7 @@ document.addEventListener(`click`, function (e) {
   }
 
   // mobile
-  if (!btnMobile.contains(e.target) && !authorContainer.contains(e.target)) {
+  if (!authorContainer.contains(e.target)) {
     mobileSharePopup.classList.add(`hidden`);
     authorInfo.classList.remove(`hideOpacity`);
     btnInactive();
